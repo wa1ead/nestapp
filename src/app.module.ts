@@ -8,11 +8,16 @@ import { UsersModule } from './users/users.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'ep-divine-wind-a54oriot.us-east-2.aws.neon.tech',
+      database: 'neondb',
+      username: 'neondb_owner',
+      password: 'I2UuqF1GECcP',
       port: 5432,
-      username: 'postgres',
-      password: ' ',
-      database: 'postgres',
+      ssl: true,
+      // connection: {
+      //   options: project = 'ep-divine-wind-a54oriot',
+      // },
+
     }),
     UsersModule,
   ],
